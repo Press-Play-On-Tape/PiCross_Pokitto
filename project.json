@@ -6024,6 +6024,32 @@
 		},
 		"\\.git\\objects\\da\\3365c40c7145cbbef0fd022492d44acde3d7d1": {
 			"sdcard": false
+		},
+		"\\.git\\objects\\78\\741a212c8475c5c8d44831540f361c02988483": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\ec": {},
+		"\\.git\\objects\\ec\\9126fd0b708749af8062bd2cbbb50bf9ef2cca": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\8d": {},
+		"\\.git\\HEAD.lock": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\8d\\705c4e6b9795e1fb9f57825f62dbe49841e909": {
+			"sdcard": false
+		},
+		"\\.git\\refs\\heads\\master.lock": {
+			"sdcard": false
+		},
+		"\\.git\\refs\\remotes\\origin\\master.lock": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_VerticalRingBorder - Copy.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Binder_Left.png": {
+			"sdcard": false
 		}
 	}
 }

@@ -269,7 +269,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
     for (int16_t x = -25; x < 220; x = x + 26) {
 
         PD::drawBitmap(x, 0, Images::Binder_Top);
-        PD::drawBitmap(x, 149, Images::Binder_Bottom);
+        PD::drawBitmap(x, 160, Images::Binder_Bottom);
     
     }
     
@@ -332,8 +332,8 @@ void SelectPuzzleState::render(StateMachine & machine) {
 //     PD::setColor(x);
 //     PD::print((int8_t)x);
 // }
-    PD::setColor(9, 1);
-    PD::setCursor(11, 34);
+    PD::setColor(8, 1);
+    PD::setCursor(11, 36);
     PD::print(puzzleRange + 5);
     PD::print("x");
     PD::print(puzzleRange + 5);
@@ -345,7 +345,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
     PD::print(static_cast<uint16_t>(completed));
     PD::print("%");
 
-    if (puzzleRange > 0) PD::drawBitmap(45, 36, Images::ArrowUp);
-    if (puzzleRange < 11) PD::drawBitmap(53, 36, Images::ArrowDown);
+    if (puzzleRange > 0) PD::drawBitmap(45, 38, Images::ArrowUp);
+    if (puzzleRange < 11) PD::drawBitmap(53, 38, Images::ArrowDown);
 
 }

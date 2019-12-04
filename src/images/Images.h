@@ -13,6 +13,7 @@ namespace Images {
     #include "Cursor.h"
     #include "Binder_Top.h"
     #include "Binder_Bottom.h"
+    #include "Binder_Left.h"
     #include "Pen.h"
     #include "PiCrossHeading.h"
 

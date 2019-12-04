@@ -39,8 +39,16 @@ void PlayGameState::render(StateMachine & machine) {
     bool flash = getFrameCountHalf(48);  
     uint8_t size = puzzle.getSize();
     uint8_t completedRows = 0;
+
+
+    PD::fillScreen(1);
     PD::setColor(1);
 
+
+    // Render biner left and right ..
+    
+    for (int16_t y = 0; y <= size; y = y + x++) {
+    
 
     for (uint8_t x = 0; x <= size; x++) {
     
@@ -58,7 +66,7 @@ void PlayGameState::render(StateMachine & machine) {
         
         }
         
-        drawDottedColumn(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) - this->xOffset, 0, this->puzzleTop + this->marginTop - this->yOffset + (size * Constants::GridWidthY)); 
+        drawDottedColumn(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) - this->xOffset, this->puzzleTop, this->puzzleTop + this->marginTop - this->yOffset + (size * Constants::GridWidthY)); 
         drawDottedRow(this->puzzleLeft, this->puzzleLeft + this->marginLeft + (size * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (x * Constants::GridWidthY) - this->yOffset);  
     
     }
@@ -118,7 +126,7 @@ void PlayGameState::render(StateMachine & machine) {
             
             if (val != 0) {
                 
-                PD::setCursor(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 3 - (val >= 10 ? 3 : 0) - this->xOffset, 1 - this->yOffset + y * 10);
+                PD::setCursor(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 3 - (val >= 10 ? 3 : 0) - this->xOffset, this->puzzleTop + 1 - this->yOffset + (y * 10));
                 PD::print(static_cast<int8_t>(val));
 
             }

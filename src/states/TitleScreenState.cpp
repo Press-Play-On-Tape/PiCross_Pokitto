@@ -47,7 +47,7 @@ void TitleScreenState::render(StateMachine & machine) {
     for (int16_t x = -25; x < 220; x = x + 26) {
 
         PD::drawBitmap(x, 0, Images::Binder_Top);
-        PD::drawBitmap(x, 149, Images::Binder_Bottom);
+        PD::drawBitmap(x, 160, Images::Binder_Bottom);
     
     }
 
