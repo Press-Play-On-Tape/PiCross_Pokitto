@@ -5775,6 +5775,255 @@
 		},
 		"\\PiCross_Pokitto.bin.1.h": {
 			"sdcard": false
+		},
+		"\\.git": {},
+		"\\.git\\COMMIT_EDITMSG": {
+			"sdcard": false
+		},
+		"\\.git\\FETCH_HEAD": {
+			"sdcard": false
+		},
+		"\\.git\\config": {
+			"sdcard": false
+		},
+		"\\.git\\description": {
+			"sdcard": false
+		},
+		"\\.git\\HEAD": {
+			"sdcard": false
+		},
+		"\\.git\\hooks": {},
+		"\\.git\\logs": {},
+		"\\.git\\info": {},
+		"\\.git\\index": {
+			"sdcard": false
+		},
+		"\\.git\\objects": {},
+		"\\.git\\packed-refs": {
+			"sdcard": false
+		},
+		"\\.git\\refs": {},
+		"\\.git\\hooks\\commit-msg.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\applypatch-msg.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\fsmonitor-watchman.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\post-update.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\pre-push.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\pre-commit.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\pre-applypatch.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\pre-rebase.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\pre-receive.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\prepare-commit-msg.sample": {
+			"sdcard": false
+		},
+		"\\.git\\hooks\\update.sample": {
+			"sdcard": false
+		},
+		"\\.git\\logs\\HEAD": {
+			"sdcard": false
+		},
+		"\\.git\\logs\\refs": {},
+		"\\.git\\info\\exclude": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\0e": {},
+		"\\.git\\objects\\13": {},
+		"\\.git\\objects\\2a": {},
+		"\\.git\\objects\\2c": {},
+		"\\.git\\objects\\2d": {},
+		"\\.git\\objects\\36": {},
+		"\\.git\\objects\\4b": {},
+		"\\.git\\objects\\3f": {},
+		"\\.git\\objects\\76": {},
+		"\\.git\\objects\\83": {},
+		"\\.git\\objects\\6d": {},
+		"\\.git\\objects\\78": {},
+		"\\.git\\objects\\8f": {},
+		"\\.git\\objects\\9a": {},
+		"\\.git\\objects\\9f": {},
+		"\\.git\\objects\\79": {},
+		"\\.git\\objects\\b5": {},
+		"\\.git\\objects\\b6": {},
+		"\\.git\\objects\\ba": {},
+		"\\.git\\objects\\e1": {},
+		"\\.git\\objects\\e4": {},
+		"\\.git\\objects\\f8": {},
+		"\\.git\\objects\\d2": {},
+		"\\.git\\objects\\f9": {},
+		"\\.git\\objects\\fa": {},
+		"\\.git\\objects\\fb": {},
+		"\\.git\\objects\\info": {},
+		"\\.git\\objects\\pack": {},
+		"\\.git\\refs\\remotes": {},
+		"\\.git\\refs\\heads": {},
+		"\\.git\\refs\\tags": {},
+		"\\.git\\logs\\refs\\heads": {},
+		"\\.git\\logs\\refs\\remotes": {},
+		"\\.git\\objects\\0e\\6c8377ad0ee8ba44bb0c039cd3205e5f3f5e49": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\2a\\6c4f372729983a2df5bf4d9176e846476762a1": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\13\\6bef9d785f8723883a074e5ec2d8e73e9dd464": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\2d\\d7d152777d745399d3ff42fb8e546c23c8d535": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\2c\\1d9a3269ac11ce7d88fac3f12c05b050df9e6f": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\36\\20f75bdccdf90b683fdaa1a7589f503f2188a4": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\4b\\42cb4f87d9a0561ca664f54093d37ba863de12": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\3f\\73c9b0e10106f16f5346c7146f4a020f4f42be": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\76\\e6a5231f6a19fa8ad9ff97fb8db84abf7055b1": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\83\\37ffb060028aca0116ebecead234fc5bc98a56": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\6d\\5555c55033c48ba557f1f4e8c10be0c5ee2c86": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\78\\ca6379d5d68d26278b13a8934cdcc2ab95a126": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\8f\\8c3a3958d1976ae8e7059e7ada3513891ed344": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\9a\\38cac52b3eab35847e79456f657dbd8770def5": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\9f\\0e8f6116f44b19687e4313ae295aa4bcfa3d42": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\9f\\f59bc6a454b52afafa2bbb572287ae1d3e7c45": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\79\\ba12154eb52799b0f4025d9d9b695e64a1d8b0": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\b5\\c5f7360462bea78ef8fd129a4c95e7ee674736": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\b6\\78c465dbddd5c391ae30d20c7b563fb9926f7f": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\ba\\7949123bb768ea4223f522b48ea0a751f94f11": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\e1\\367d477b471b3119841fd919ee15b210249aff": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\f8\\204b9bc939158049b8bb0190faf16282bfa8fc": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\e4\\a78780dbe37dc0601e09434a57638f45382753": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\d2\\053f7727effd23dfb93362137ef3d543fb2960": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\f9\\ffc8ad309b21f1804160208f897b28564f6908": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\fa\\249b8e7ad56b8d46e1958845b001d23ff0d5d5": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\fb\\35109a134952aa450b708c4415c7abd2949c0e": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\fb\\a492860a2ff3ed5ce715caf7b731c5d11edcc1": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\pack\\pack-e76c73b899fb895d19c9b83d9889c5928a6e8cf8.idx": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\pack\\pack-e76c73b899fb895d19c9b83d9889c5928a6e8cf8.pack": {
+			"sdcard": false
+		},
+		"\\.git\\refs\\remotes\\origin": {},
+		"\\.git\\refs\\heads\\master": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\d6": {},
+		"\\.git\\logs\\refs\\heads\\master": {
+			"sdcard": false
+		},
+		"\\.git\\logs\\refs\\remotes\\origin": {},
+		"\\.git\\refs\\remotes\\origin\\HEAD": {
+			"sdcard": false
+		},
+		"\\.git\\refs\\remotes\\origin\\master": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\d6\\43f1ed5be1a8af7cadd8eaeb8a104d286da9ba": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\08": {},
+		"\\.git\\objects\\95": {},
+		"\\.git\\objects\\16": {},
+		"\\.git\\objects\\46": {},
+		"\\.git\\objects\\6f": {},
+		"\\.git\\logs\\refs\\remotes\\origin\\HEAD": {
+			"sdcard": false
+		},
+		"\\.git\\logs\\refs\\remotes\\origin\\master": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\08\\cced77283b29b9c5a02dff3677c568b49aee03": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\95\\a6c763dca234293262010f0f32a92ba6e49f42": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\16\\c7200c07ed7ee839f5af2c787af42b12bff0d0": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\46\\c1b58528dae52ff12ff81ae437b8cbfa1120e9": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\6f\\a208a9ccb42281f9402a2145005eddbc5d2683": {
+			"sdcard": false
+		},
+		"\\.git\\index.lock": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\0a": {},
+		"\\.git\\objects\\de": {},
+		"\\.git\\objects\\0a\\f87eb8de8168484ea7f4ee7e0f1ab224bd2679": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\da": {},
+		"\\.git\\objects\\de\\78b12a990394f0def930c1018f7f4f96d6ae6a": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\da\\3365c40c7145cbbef0fd022492d44acde3d7d1": {
+			"sdcard": false
 		}
 	}
 }

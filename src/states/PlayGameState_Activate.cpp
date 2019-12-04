@@ -19,7 +19,7 @@ void PlayGameState::activate(StateMachine & machine) {
     this->marginLeft = 3 + this->maxSeriesRow * 7;
     this->marginTop = 2 + this->maxSeriesCol * 10;
 
-    this->puzzleLeft = 3 + this->maxSeriesRow * 7;
+    this->puzzleLeft = (220 - (3 + this->maxSeriesRow * 7) - (puzzle.getSize() * Constants::GridWidthX) ) / 2;
     
     this->counter = 0;
     this->exitGame = false;

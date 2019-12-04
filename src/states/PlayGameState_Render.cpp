@@ -59,7 +59,7 @@ void PlayGameState::render(StateMachine & machine) {
         }
         
         drawDottedColumn(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) - this->xOffset, 0, this->puzzleTop + this->marginTop - this->yOffset + (size * Constants::GridWidthY)); 
-        drawDottedRow(0, this->puzzleLeft + this->marginLeft + (size * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (x * Constants::GridWidthY) - this->yOffset);  
+        drawDottedRow(this->puzzleLeft, this->puzzleLeft + this->marginLeft + (size * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (x * Constants::GridWidthY) - this->yOffset);  
     
     }
 
@@ -136,7 +136,7 @@ void PlayGameState::render(StateMachine & machine) {
         
         if (puzzle.isRowMatch(y)) {
             
-            PD::fillRect(this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 1 - this->yOffset, this->puzzleLeft + this->marginLeft - 1, 8);
+            PD::fillRect(this->puzzleLeft + this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 1 - this->yOffset, this->marginLeft - 1, 8);
             PD::setColor(2);
             
             completedRows++;
@@ -158,7 +158,7 @@ void PlayGameState::render(StateMachine & machine) {
             
                 if (val >= 10) largerThan10++;
 
-                PD::setCursor(1 + (x * 7) - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset);
+                PD::setCursor(this->puzzleLeft + 1 + (x * 7) - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset);
                 PD::print(static_cast<int8_t>(val));
 
             }
