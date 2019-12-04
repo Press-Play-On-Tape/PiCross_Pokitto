@@ -5424,6 +5424,357 @@
 		},
 		"/src/images/PiCrossHeading.h": {
 			"sdcard": false
+		},
+		"\\Assets": {},
+		"\\main.cpp": {
+			"sdcard": false
+		},
+		"\\My_settings.h": {
+			"sdcard": false
+		},
+		"\\Picross_Pokitto.bin": {
+			"sdcard": false
+		},
+		"\\README.md": {
+			"sdcard": false
+		},
+		"\\Picross_Pokitto.elf": {
+			"sdcard": false
+		},
+		"\\project.json": {
+			"sdcard": false
+		},
+		"\\src": {},
+		"\\Assets\\PiCross_Frames.png": {
+			"sdcard": false
+		},
+		"\\Assets\\Picross_HorizontalBottomPaperBG.png": {
+			"sdcard": false
+		},
+		"\\Assets\\Picross_ingameRightBorder.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_HorizontalRingBorder.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_Logo.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_PencilSelector.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_VerticalRingBorder.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_SelectAPuzzleHeader.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_TitleScreen.png": {
+			"sdcard": false
+		},
+		"\\src\\entities": {},
+		"\\src\\Game.h": {
+			"sdcard": false
+		},
+		"\\src\\Game.cpp": {
+			"sdcard": false
+		},
+		"\\src\\images": {},
+		"\\src\\puzzles": {},
+		"\\src\\states": {},
+		"\\src\\utils": {},
+		"\\src\\entities\\Entities.h": {
+			"sdcard": false
+		},
+		"\\src\\entities\\Puzzle.cpp": {
+			"sdcard": false
+		},
+		"\\src\\entities\\Puzzle.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ArrowDown.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ArrowDown.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\ArrowUp.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\ArrowUp.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Binder_Bottom.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Binder_Bottom.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Binder_Top.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Binder_Top.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Box.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Box.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Congratulations.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Congratulations.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Cursor.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\LeaveGame.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Images.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Cursor.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\LeaveGame.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Pen.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\PiCrossHeading.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\PiCrossHeading.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Pen.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot": {},
+		"\\src\\images\\QuestionMark.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Selector_Bottom.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\QuestionMark.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Selector_Bottom.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Selector_Top.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Selector_Top.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\title": {},
+		"\\src\\images\\Temp.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\Temp.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles10x10.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles12x12.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles11x11.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles13x13.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles14x14.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles15x15.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles5x5.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles16x16.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles6x6.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles7x7.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles8x8.h": {
+			"sdcard": false
+		},
+		"\\src\\puzzles\\Puzzles9x9.h": {
+			"sdcard": false
+		},
+		"\\src\\states\\BaseState.h": {
+			"sdcard": false
+		},
+		"\\src\\states\\PlayGameState.h": {
+			"sdcard": false
+		},
+		"\\src\\states\\BaseState.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\PlayGameState_Activate.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\PlayGameState_Render.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\PlayGameState_Update.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\PlayGameState_Utils.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\SelectPuzzleState.h": {
+			"sdcard": false
+		},
+		"\\src\\states\\SplashScreenState.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\SelectPuzzleState.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\States.h": {
+			"sdcard": false
+		},
+		"\\src\\states\\SplashScreenState.h": {
+			"sdcard": false
+		},
+		"\\src\\states\\TitleScreenState.cpp": {
+			"sdcard": false
+		},
+		"\\src\\states\\TitleScreenState.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\Constants.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\Enums.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\GameCookie.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\GameContext.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\GameContext.cpp": {
+			"sdcard": false
+		},
+		"\\src\\utils\\GameState.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\GameStateMachine.h": {
+			"sdcard": false
+		},
+		"\\src\\utils\\Utils.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_00.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_00.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_01.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_01.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_02.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_02.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_03.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\ppot\\Ppot_03.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\TitleScreen_Bottom.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\TitleScreen_Bottom.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\TitleScreen_Middle.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\TitleScreen_Middle.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\TitleScreen_Top.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\Title_Middle.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\Title_Top.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\Title_Bottom.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\title\\TitleScreen_Top.png": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_Logo.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_VerticalRingBorder.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_Frames.h": {
+			"sdcard": false
+		},
+		"\\Assets\\Picross_HorizontalBottomPaperBG.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_HorizontalRingBorder.h": {
+			"sdcard": false
+		},
+		"\\Assets\\Picross_ingameRightBorder.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_SelectAPuzzleHeader.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_TitleScreen.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_PencilSelector.h": {
+			"sdcard": false
+		},
+		"\\PiCross_Pokitto.elf": {
+			"sdcard": false
+		},
+		"\\PiCross_Pokitto.bin": {
+			"sdcard": false
+		},
+		"\\PiCross_Pokitto.bin.1.png": {
+			"sdcard": false
+		},
+		"\\PiCross_Pokitto.bin.1.h": {
+			"sdcard": false
 		}
 	}
 }
