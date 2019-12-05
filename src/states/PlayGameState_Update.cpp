@@ -16,7 +16,7 @@ void PlayGameState::update(StateMachine & machine) {
 
     // Exit game?
     
-    if (PC::buttons.held(BTN_B, 100)) {
+    if (PC::buttons.held(BTN_B, 50)) {
         this->exitGame = true;
     }
 

@@ -42,13 +42,20 @@ void PlayGameState::render(StateMachine & machine) {
 
 
     PD::fillScreen(1);
-    PD::setColor(1);
+    PD::setColor(8);
 
 
     // Render biner left and right ..
     
-    for (int16_t y = 0; y <= size; y = y + x++) {
-    
+    if (puzzle.getSize() < 14) {
+
+        for (int16_t y = -24; y < 176; y = y + 26) {     
+            
+            PD::drawBitmap(0, y, Images::Binder_Left);
+        
+        }
+
+    }    
 
     for (uint8_t x = 0; x <= size; x++) {
     
@@ -83,7 +90,7 @@ void PlayGameState::render(StateMachine & machine) {
                     break;
                 
                 case GridValue::Selected:
-                    PD::setColor(1);
+                    PD::setColor(9);
                     PD::fillRectangle(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 2 - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset, 7, 6);
                     break;
                 

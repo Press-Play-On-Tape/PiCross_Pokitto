@@ -6050,6 +6050,98 @@
 		},
 		"\\src\\images\\Binder_Left.png": {
 			"sdcard": false
+		},
+		"\\.git\\objects\\f6": {},
+		"\\.git\\objects\\f6\\940308c3a0ab97603cfa99b3ebdd26c57d49bb": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\ce": {},
+		"\\.git\\objects\\b1": {},
+		"\\.git\\objects\\ce\\122901678bd32b3d87d81c3f5e60d51b4b65bf": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\b1\\d55ca0aa6b8caf965ec38453eaadd35b76e770": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\70": {},
+		"\\.git\\objects\\70\\80b2ad2fc9dead6bcd8871ec473dd7b51a75e3": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\8e": {},
+		"\\.git\\objects\\ed": {},
+		"\\.git\\objects\\8e\\5bc3fd644a3283e277b9437ba7bf2d3af4a792": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\e5": {},
+		"\\.git\\objects\\ed\\e9c3187bead5881277da04e7c5784b55fd8556": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\0f": {},
+		"\\.git\\objects\\f4": {},
+		"\\.git\\objects\\e5\\ad736fc56f2a6e86e5f5adb1613ebf4db1c889": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\0f\\c2d6cb018927e2444e3c2da5b8b24494ae3026": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\ee": {},
+		"\\.git\\objects\\f4\\629ecb915f4e7ea2f6b94a343bdf8e5e6c3ddc": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\26": {},
+		"\\.git\\objects\\8c": {},
+		"\\.git\\objects\\ee\\8edb5ff5a8988280764bb2873c61e1251dc1c9": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\1f": {},
+		"\\.git\\objects\\26\\ca51c4e428c413a1cff9ec7ca3cad7161319b7": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\8c\\dda70931f1345c2e0871e5da537c13ba2adf76": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\56": {},
+		"\\.git\\objects\\ea": {},
+		"\\.git\\objects\\1f\\8181f4db91a92a8afe24379fe96793f55c046c": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\dd": {},
+		"\\.git\\objects\\56\\5e2e043903d786deac28f59b43e6ad8594fd96": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\ea\\b34a5ebc3df7d07f241992108ebd01a425e7ee": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\dd\\c8888b9260975e4eeed52c07d1b4f3cc208e61": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\57": {},
+		"\\.git\\objects\\56\\08c3c4237f9acf220acc2b9fe1de480a972839": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\55": {},
+		"\\.git\\objects\\57\\4a6278fabaefe3b2fc46df73b63d7bf8d62935": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\f2": {},
+		"\\.git\\objects\\55\\74f9682bcca0debd5b4e74bdb2d05be179f538": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\8e\\61b89a4a8d1a7878f7c2fe48b513305fec4ed7": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\f2\\65a87be2160d31c147f2f4fc5276705dbf00c3": {
+			"sdcard": false
+		},
+		"\\.git\\objects\\f3": {},
+		"\\.git\\objects\\f3\\3a803d275ba7c64463184849e8f24953f834bc": {
+			"sdcard": false
+		},
+		"\\src\\images\\Binder_Left.h": {
+			"sdcard": false
+		},
+		"\\Assets\\PiCross_VerticalRingBorder - Copy.h": {
+			"sdcard": false
 		}
 	}
 }
