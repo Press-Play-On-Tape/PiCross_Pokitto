@@ -6296,6 +6296,48 @@
 		},
 		"/src/images/ArrowLeft.h": {
 			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.2.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.3.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.4.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.5.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.6.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.7.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.8.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.2.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.4.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.3.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.5.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.6.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.8.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.7.h": {
+			"sdcard": false
 		}
 	}
 }

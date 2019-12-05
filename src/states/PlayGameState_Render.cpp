@@ -50,7 +50,7 @@ void PlayGameState::render(StateMachine & machine) {
     if (puzzle.getSize() < 15) {
 
         PD::drawBitmap(0, 0, Images::Binder_Left);
-        PD::drawBitmap(208, 0, Images::Binder_Right);
+//        PD::drawBitmap(208, 0, Images::Binder_Right);
 
     }    
 
@@ -205,9 +205,9 @@ void PlayGameState::render(StateMachine & machine) {
             uint8_t scale = Constants::Scale[puzzle.getPuzzleIndex() / 25];
             uint8_t offset = Constants::Offset[puzzle.getPuzzleIndex() / 25];
             
-            PD::drawBitmap(6, 20, Images::Congratulations);
+            PD::drawBitmap(18, 60, Images::Congratulations);
             
-            renderPuzzleImage(166, 30, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale);
+            renderPuzzleImage(176, 68, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale);
 
             
             // PD::drawBitmap(101 - (width / 2), 32 - (height / 2), Images::Puzzles[puzzle.getPuzzleIndex()]);
@@ -218,17 +218,8 @@ void PlayGameState::render(StateMachine & machine) {
     }
     else if (this->showMenu) {
     
-        PD::drawBitmap(55, 8, Images::Binder_Folded);
-
-        PD::setColor(1, 11);
-        PD::setCursor(158, 145);
-        PD::print("Save Game");
-        PD::setCursor(153, 155);
-        PD::print("Reset Game");
-        PD::setCursor(159, 165);
-        PD::print("Exit Game");
-
-        PD::drawBitmap(214, 145 + (this->menuOption * 10), Images::ArrowLeft);
+        PD::drawBitmap(107, 75, Images::Binder_Folded);
+        PD::drawBitmap(214, 147 + (this->menuOption * 9), Images::ArrowLeft);
 
     }
     else {

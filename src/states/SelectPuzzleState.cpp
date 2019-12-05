@@ -65,6 +65,12 @@ void SelectPuzzleState::update(StateMachine & machine) {
 
     // Navigation .. 
     
+    if (PC::buttons.pressed(BTN_B)) {
+    
+        machine.changeState(GameStateType::TitleScreen); 
+    
+    }
+    
     if (PC::buttons.pressed(BTN_LEFT) && puzzleIndexMod25 > 0) {
     
         this->puzzleIndex--;
