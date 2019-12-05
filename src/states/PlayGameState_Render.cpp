@@ -47,13 +47,10 @@ void PlayGameState::render(StateMachine & machine) {
 
     // Render biner left and right ..
     
-    if (puzzle.getSize() < 14) {
+    if (puzzle.getSize() < 15) {
 
-        for (int16_t y = -24; y < 176; y = y + 26) {     
-            
-            PD::drawBitmap(0, y, Images::Binder_Left);
-        
-        }
+        PD::drawBitmap(0, 0, Images::Binder_Left);
+        PD::drawBitmap(208, 0, Images::Binder_Right);
 
     }    
 
@@ -90,7 +87,7 @@ void PlayGameState::render(StateMachine & machine) {
                     break;
                 
                 case GridValue::Selected:
-                    PD::setColor(9);
+                    PD::setColor(8);
                     PD::fillRectangle(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 2 - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset, 7, 6);
                     break;
                 
@@ -110,20 +107,19 @@ void PlayGameState::render(StateMachine & machine) {
     // Render column headers ..
     
     for (uint8_t x = 0; x < size; x++) {
-         
-        PD::setColor(1);
-   
+
         if (puzzle.isColMatch(x)) {
         
-            PD::fillRect(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 1 - this->xOffset, -this->yOffset, 9, this->puzzleTop + this->marginTop - 2);
-            PD::setColor(2);
+            PD::setColor(8);
+            PD::fillRect(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 1 - this->xOffset, this->puzzleTop - this->yOffset, 9, this->marginTop - 2);
+            PD::setColor(1, 8);
             
             completedRows++;
         
         }
         else {
         
-            PD::setColor(3);
+            PD::setColor(8, 1);
     
         }
     
@@ -146,20 +142,19 @@ void PlayGameState::render(StateMachine & machine) {
     // Render row headers ..
     
     for (uint8_t y = 0; y < size; y++) {
-    
-        PD::setColor(1);
-        
+
         if (puzzle.isRowMatch(y)) {
             
+            PD::setColor(8);
             PD::fillRect(this->puzzleLeft + this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 1 - this->yOffset, this->marginLeft - 1, 8);
-            PD::setColor(2);
+            PD::setColor(1, 8);
             
             completedRows++;
             
         }
         else {
         
-            PD::setColor(3);
+            PD::setColor(8, 1);
         
         }
         
@@ -221,15 +216,26 @@ void PlayGameState::render(StateMachine & machine) {
        }
     
     }
-    else if (this->exitGame) {
+    else if (this->showMenu) {
     
-        PD::drawBitmap(14, 20, Images::LeaveGame);
+        PD::drawBitmap(55, 8, Images::Binder_Folded);
+
+        PD::setColor(1, 11);
+        PD::setCursor(158, 145);
+        PD::print("Save Game");
+        PD::setCursor(153, 155);
+        PD::print("Reset Game");
+        PD::setCursor(159, 165);
+        PD::print("Exit Game");
+
+        PD::drawBitmap(214, 145 + (this->menuOption * 10), Images::ArrowLeft);
 
     }
     else {
     
         if (flash) {
-            PD::drawBitmap(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset, Images::Cursor);
+            PD::setColor(8, 1);            
+            PD::drawBitmap(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset + 1, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset + 1, Images::Cursor);
             PD::drawRect(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset, 10, 10);
         }
     

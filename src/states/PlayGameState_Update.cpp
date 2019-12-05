@@ -16,139 +16,185 @@ void PlayGameState::update(StateMachine & machine) {
 
     // Exit game?
     
-    if (PC::buttons.held(BTN_B, 50)) {
-        this->exitGame = true;
+    if (PC::buttons.pressed(BTN_C)) {
+        this->showMenu = true;
     }
-
-
-	// Normal play ..
-
-	if (!this->gameOver && !this->exitGame) {
-    	    
-    	if (PC::buttons.pressed(BTN_LEFT))	{
-    	
-    		puzzle.decX();
-    		if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
-    
-    	}
-    
-    	if (PC::buttons.pressed(BTN_RIGHT)) {
-    
-    		puzzle.incX();
-    		if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
-    
-    	}
-    
-    	if (PC::buttons.pressed(BTN_UP))	{
-    
-    		puzzle.decY();
-    		if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
-    
-    	}
-    
-    	if (PC::buttons.pressed(BTN_DOWN)) {
-    
-    		puzzle.incY();
-    		if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
-    
-    	}
-
-		uint8_t xPos = this->marginLeft + (puzzle.getX() * Constants::GridWidthX);
-		uint8_t yPos = this->marginTop + (puzzle.getY() * Constants::GridWidthY);
-
-// 		if (xPos >= 119) {
-// 			this->xOffset = xPos - 119;
-// 		}
-// 		else {
-// 			this->xOffset = 0;
-// 		}
-
-		if (yPos >= 165) { //55
-			this->yOffset = yPos - 165;
-		}
-		else {
-			this->yOffset = 0;
-		}
-
-		if (PC::buttons.pressed(BTN_A)) {
-
-			GridValue current = puzzle.getGrid(FilterValue::PlayerSelection);
-
-			switch (current) {
-
-				case GridValue::Blank:	
-				case GridValue::Marked:	
-					puzzle.setGrid(GridValue::Selected);
-					this->lastUpdate = GridValue::Selected;
-					break;
-
-				case GridValue::Selected:	
-					puzzle.setGrid(GridValue::Blank);
-					lastUpdate = GridValue::Blank;
-					break;
-					
-				default: break;
-
-			}
-			
-		}
-
-		if (PC::buttons.released(BTN_B)) {
-
-			GridValue current = puzzle.getGrid(FilterValue::PlayerSelection);
-
-			switch (current) {
-
-				case GridValue::Blank:	
-				case GridValue::Selected:	
-					puzzle.setGrid(GridValue::Marked);
-					break;
-
-				case GridValue::Marked:	
-					puzzle.setGrid(GridValue::Blank);
-					break;
-										
-				default: break;
-					
-			}
-			
-		}
-
-	}
 	else {
 
-		if (this->gameOver) {
 
-			if (this->counter < 2) {
+		// Normal play ..
 
-			 	this->counter++;
+		if (!this->gameOver && !this->showMenu) {
 				
+			if (PC::buttons.pressed(BTN_LEFT))	{
+			
+				puzzle.decX();
+				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
+				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
+		
+			}
+		
+			if (PC::buttons.pressed(BTN_RIGHT)) {
+		
+				puzzle.incX();
+				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
+				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
+		
+			}
+		
+			if (PC::buttons.pressed(BTN_UP))	{
+		
+				puzzle.decY();
+				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
+				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
+		
+			}
+		
+			if (PC::buttons.pressed(BTN_DOWN)) {
+		
+				puzzle.incY();
+				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
+				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
+		
+			}
+
+			uint8_t xPos = this->marginLeft + (puzzle.getX() * Constants::GridWidthX);
+			uint8_t yPos = this->marginTop + (puzzle.getY() * Constants::GridWidthY);
+
+
+			// Handle vertical scrolling ..
+
+			if (yPos >= 165) { 
+				this->yOffset = yPos - 165;
 			}
 			else {
+				this->yOffset = 0;
+			}
 
-				if (PC::buttons.pressed(BTN_A)) {
+			if (PC::buttons.pressed(BTN_A)) {
 
-					machine.changeState(GameStateType::SelectPuzzle);
+				GridValue current = puzzle.getGrid(FilterValue::PlayerSelection);
+
+				switch (current) {
+
+					case GridValue::Blank:	
+					case GridValue::Marked:	
+						puzzle.setGrid(GridValue::Selected);
+						this->lastUpdate = GridValue::Selected;
+						break;
+
+					case GridValue::Selected:	
+						puzzle.setGrid(GridValue::Blank);
+						this->lastUpdate = GridValue::Blank;
+						break;
+						
+					default: break;
+
+				}
+				
+			}
+
+			if (PC::buttons.pressed(BTN_B)) {
+
+				GridValue current = puzzle.getGrid(FilterValue::PlayerSelection);
+
+				switch (current) {
+
+					case GridValue::Blank:	
+					case GridValue::Selected:	
+						puzzle.setGrid(GridValue::Marked);
+						this->lastUpdate = GridValue::Marked;
+						break;
+
+					case GridValue::Marked:	
+						puzzle.setGrid(GridValue::Blank);
+						this->lastUpdate = GridValue::Blank;
+						break;
+											
+					default: break;
+						
+				}
+				
+			}
+
+		}
+		else {
+
+			if (this->gameOver) {
+
+				if (this->counter < 2) {
+
+					this->counter++;
+					
+				}
+				else {
+
+					if (PC::buttons.pressed(BTN_A)) {
+
+						machine.changeState(GameStateType::SelectPuzzle);
+
+					}
 
 				}
 
 			}
 
-		}
-
-		if (this->exitGame) {
-
-			if (PC::buttons.pressed(BTN_A)) {
-
-				puzzle.saveCookie();
-				machine.changeState(GameStateType::SelectPuzzle);
-
-			}
-
-			if (PC::buttons.pressed(BTN_B)) {
+			if (this->showMenu) {
+		
+				if (PC::buttons.pressed(BTN_UP) && this->menuOption > 0)	{
 			
-				this->exitGame = false;
+					this->menuOption--;
 			
+				}
+			
+				if (PC::buttons.pressed(BTN_DOWN) && this->menuOption < 2) {
+			
+					this->menuOption++;
+			
+				}
+
+				if (PC::buttons.pressed(BTN_A)) {
+
+					switch (this->menuOption)	{
+
+						case 0:
+							puzzle.saveCookie();
+							this->showMenu = false;
+							break;
+
+						case 1:
+
+							for (uint8_t x = 0; x < 16; x++) {
+
+								for (uint8_t y = 0; y < 16; y++) {
+									
+									puzzle.setGrid(x, y, GridValue::Blank);
+
+								}
+
+							}
+
+							puzzle.setX(0);
+							puzzle.setY(0);
+							puzzle.saveCookie();
+							this->showMenu = false;
+							break;
+
+						case 2:
+							puzzle.saveCookie();
+							machine.changeState(GameStateType::SelectPuzzle);
+							break;
+						
+					}
+
+				}
+
+				if (PC::buttons.pressed(BTN_B) || PC::buttons.pressed(BTN_C)) {
+				
+					this->showMenu = false;
+				
+				}
+
 			}
 
 		}

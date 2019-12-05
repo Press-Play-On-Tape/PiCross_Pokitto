@@ -44,13 +44,9 @@ void TitleScreenState::render(StateMachine & machine) {
     
     // Render top and bottom binders ..
 
-    for (int16_t x = -25; x < 220; x = x + 26) {
-
-        PD::drawBitmap(x, 0, Images::Binder_Top);
-        PD::drawBitmap(x, 160, Images::Binder_Bottom);
+    PD::drawBitmap(0, 0, Images::Binder_Top);
+    PD::drawBitmap(0, 160, Images::Binder_Bottom);
     
-    }
-
 
     PD::drawBitmap(11, 64, Images::PiCrossHeading);
     

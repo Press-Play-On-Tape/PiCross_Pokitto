@@ -26,7 +26,7 @@ void PlayGameState::activate(StateMachine & machine) {
         this->puzzleLeft = 0;
     }
     
-    if (this->marginTop - (puzzle.getSize() * Constants::GridWidthY) < 176) {
+    if (this->marginTop + (puzzle.getSize() * Constants::GridWidthY) < 176) {
         this->puzzleTop = (176 - this->marginTop - (puzzle.getSize() * Constants::GridWidthY) ) / 2;
     }
     else {
@@ -34,7 +34,7 @@ void PlayGameState::activate(StateMachine & machine) {
     }
     
     this->counter = 0;
-    this->exitGame = false;
+    this->showMenu = false;
     this->gameOver = false;
     
     puzzle.setX(0);

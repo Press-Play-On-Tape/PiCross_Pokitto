@@ -31,10 +31,12 @@ class PlayGameState : public BaseState {
     uint8_t puzzleLeft = 0;
 
     bool gameOver = false;
-    bool exitGame = false;
+    bool showMenu = false;
+
     uint8_t counter = 0;
     uint8_t xOffset = 0;
     uint8_t yOffset = 0;
+    uint8_t menuOption = 0;
 
     GridValue lastUpdate = GridValue::Blank;
 };

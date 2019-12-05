@@ -6142,6 +6142,160 @@
 		},
 		"\\Assets\\PiCross_VerticalRingBorder - Copy.h": {
 			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.1.h": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin.1.png": {
+			"sdcard": false
+		},
+		"/README.md": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_Frames.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_HorizontalRingBorder.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_Frames.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_Logo.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_HorizontalRingBorder.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_PencilSelector.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_Logo.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_PencilSelector.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_SelectAPuzzleHeader.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_TitleScreen.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_SelectAPuzzleHeader.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_TitleScreen.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_VerticalRingBorder - Copy.png": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_VerticalRingBorder - Copy.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_VerticalRingBorder.h": {
+			"sdcard": false
+		},
+		"/Assets/PiCross_VerticalRingBorder.png": {
+			"sdcard": false
+		},
+		"/Assets/Picross_HorizontalBottomPaperBG.h": {
+			"sdcard": false
+		},
+		"/Assets/Picross_ingameRightBorder.png": {
+			"sdcard": false
+		},
+		"/Assets/Picross_HorizontalBottomPaperBG.png": {
+			"sdcard": false
+		},
+		"/Assets/Picross_ingameRightBorder.h": {
+			"sdcard": false
+		},
+		"/src/images/Binder_Left.h": {
+			"sdcard": false
+		},
+		"/src/images/Binder_Left.png": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.elf": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.bin": {
+			"sdcard": false
+		},
+		"/src/images/PiCross_VerticalRingBorder - Copy.png": {
+			"sdcard": false
+		},
+		"/src/images/PiCross_HorizontalRingBorder.png": {
+			"sdcard": false
+		},
+		"/Assets/.DS_Store": {
+			"sdcard": false
+		},
+		"/src/images/Picross_ingameRightBorder.png": {
+			"sdcard": false
+		},
+		"/src/images/Binder_Right.png": {
+			"sdcard": false
+		},
+		"/src/images/binder": {},
+		"/src/images/binder/Binder_Bottom.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Left.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Top.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Right.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Selector_Top.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/.DS_Store": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Left.h": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Bottom.h": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Top.h": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Right.h": {
+			"sdcard": false
+		},
+		"/src/images/binder/Selector_Top.h": {
+			"sdcard": false
+		},
+		"/Assets/Paper_Folded.jpg": {
+			"sdcard": false
+		},
+		"/src/images/binder/Paper_Folded.jpg": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Folded.jpg": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Folded.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Binder_Folded.h": {
+			"sdcard": false
+		},
+		"/src/images/ArrowLeft.png": {
+			"sdcard": false
+		},
+		"/src/images/ArrowLeft.png.sb-0a9bdc55-XUM8x2": {
+			"sdcard": false
+		},
+		"/src/images/ArrowLeft.h": {
+			"sdcard": false
 		}
 	}
 }
