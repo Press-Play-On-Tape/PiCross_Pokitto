@@ -50,7 +50,7 @@ void PlayGameState::render(StateMachine & machine) {
     if (puzzle.getSize() < 15) {
 
         PD::drawBitmap(0, 0, Images::Binder_Left);
-//        PD::drawBitmap(208, 0, Images::Binder_Right);
+//      PD::drawBitmap(208, 0, Images::Binder_Right);
 
     }    
 

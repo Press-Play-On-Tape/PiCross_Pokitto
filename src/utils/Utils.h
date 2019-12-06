@@ -90,6 +90,20 @@ static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleI
 
             for (uint8_t z = 0; z < 8; z++) {
 
+
+                // Alternate colours on rendering ..
+
+                if (((z * width) + x + (width % 2 == 0 && z % 2 == 0 ? 1 : 0)) % 2 == 0) {
+                    
+                    PD::setColor(5);
+                    
+                }
+                else {
+                    
+                    PD::setColor(9);
+                    
+                }
+
                 uint8_t val = (data & (1 << z));
 
                 if (val > 0)
@@ -97,8 +111,11 @@ static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleI
 
             }
 
+printf("\n");                
         }
+printf("\n");                
 
     }
 
+printf("\n");                
 }

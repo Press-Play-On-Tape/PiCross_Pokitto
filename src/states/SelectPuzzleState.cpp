@@ -83,33 +83,15 @@ void SelectPuzzleState::update(StateMachine & machine) {
     
     }
     
-    if (PC::buttons.pressed(BTN_UP)) {
+    if (PC::buttons.pressed(BTN_UP) && puzzleRange > 0) {
 
-        if (puzzleRange > 0) {
-    
-            this->puzzleIndex = this->puzzleIndex - 25;
-
-        }
-        else {
-
-            this->puzzleIndex = this->puzzleIndex + (11 * 25);
-
-        }
+        this->puzzleIndex = this->puzzleIndex - 25;
     
     }
     
-    if (PC::buttons.pressed(BTN_DOWN)) {
+    if (PC::buttons.pressed(BTN_DOWN) && puzzleRange < 11) {
 
-        if (puzzleRange < 11) {
-    
-            this->puzzleIndex = this->puzzleIndex + 25;
-
-        }
-        else {
-
-            this->puzzleIndex = this->puzzleIndex - (11 * 25);
-
-        }
+        this->puzzleIndex = this->puzzleIndex + 25;
     
     }
 
@@ -309,7 +291,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
     completed = completed * 4;
     
     
-    PD::drawBitmap(9, 31, Images::Selector_Top);
+    PD::drawBitmap(9, 44, Images::Selector_Top);
 
     for (int16_t x = lowerLimit; x < upperLimit; x++) {
         
@@ -345,67 +327,20 @@ void SelectPuzzleState::render(StateMachine & machine) {
     }
 
 
-    // Row 2 ..
-
-    int16_t lowerLimit_2 = 0;
-    int16_t upperLimit_2 = 0;
-
-    if (puzzleRange < 11) {
-
-        lowerLimit_2 = lowerLimit + 25;
-        upperLimit_2 = upperLimit + 25;
-
-    }
-    else {
-
-        lowerLimit_2 = lowerLimit - (11 * 25);
-        upperLimit_2 = upperLimit - (11 * 25);
-
-    }
-
-    for (int16_t x = lowerLimit_2, y = lowerLimit; x < upperLimit_2; x++, y++) {
-        
-        uint8_t xPos = x - lowerLimit_2;
-        uint8_t width = puzzleRange + 5;
-        uint8_t height = puzzleRange + 5;
-        
-        PD::drawBitmap(9 + (xPos * Constants::Select_Spacing), Constants::Select_Top_2, Images::Box);
-
-        if (puzzle.getPuzzlesSolved((puzzleRange * 25) + x)) {
-            
-            uint8_t scale = Constants::Scale[puzzleRange < 11 ? puzzleRange + 1 : 0];
-            uint8_t offset = Constants::Offset[puzzleRange < 11 ? puzzleRange + 1 : 0];
-        
-            PD::setColor(11, 1);            
-            renderPuzzleImage(9 + (xPos * Constants::Select_Spacing) + 2 + offset, Constants::Select_Top_2 + 2 + offset, Puzzles::puzzles[(puzzleRange * 25) + x], scale);
-
-        }
-        else {
-            PD::drawBitmap(10 + (xPos * Constants::Select_Spacing), Constants::Select_Top_2 + 1, Images::QuestionMark);
-        }
-
-        PD::setColor(8, 1);
-        PD::setCursor(13 + (xPos * Constants::Select_Spacing) + 7, Constants::Select_Label_2);
-        if (y + 1 < 10) PD::print("0");
-        PD::print(y + 1);
-
-    }
-
-
     PD::setColor(8, 1);
-    PD::setCursor(11, 36);
+    PD::setCursor(11, 49);
     PD::print(puzzleRange + 5);
     PD::print("x");
     PD::print(puzzleRange + 5);
 
     PD::setColor(1, 8);
-    PD::setCursor(180, 36);
+    PD::setCursor(180, 49);
     if (completed < 100) PD::print("0");
     if (completed < 10)  PD::print("0");
     PD::print(static_cast<uint16_t>(completed));
     PD::print("%");
 
-    PD::drawBitmap(45, 38, Images::ArrowUp);
-    PD::drawBitmap(53, 38, Images::ArrowDown);
+    if (puzzleRange > 0)    PD::drawBitmap(45, 51, Images::ArrowUp);
+    if (puzzleRange < 11)   PD::drawBitmap(53, 51, Images::ArrowDown);
 
 }
