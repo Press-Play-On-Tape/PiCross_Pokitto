@@ -141,7 +141,7 @@ void Puzzle::setPuzzleMaxCol(uint8_t value) {
 }
 
 bool Puzzle::getPuzzlesSolved(uint16_t index) {
-
+printf("%i\n",index);
     return (this->cookie->getPuzzlesSolved(index));
 
 }

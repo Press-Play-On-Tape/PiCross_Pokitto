@@ -280,7 +280,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
     
     for (uint8_t x = 0; x < 25; x++) {
     
-        if (puzzle.getPuzzlesSolved((puzzleRange * 25) + x)) {  
+        if (puzzle.getPuzzlesSolved(static_cast<uint16_t>((puzzleRange * 25) + x))) {  
             
             completed++;
             
@@ -301,7 +301,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
         
         PD::drawBitmap(9 + (xPos * Constants::Select_Spacing), Constants::Select_Top, Images::Box);
         
-        if (puzzle.getPuzzlesSolved((puzzleRange * 25) + x)) {
+        if (puzzle.getPuzzlesSolved(static_cast<uint16_t>((puzzleRange * 25) + x))) {
             
             uint8_t scale = Constants::Scale[puzzleRange];
             uint8_t offset = Constants::Offset[puzzleRange];

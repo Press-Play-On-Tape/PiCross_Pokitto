@@ -71,14 +71,14 @@ class GameCookie : public Pokitto::Cookie {
 
     }
 
-    uint8_t getPuzzlesSolved(uint8_t index) {
+    uint8_t getPuzzlesSolved(uint16_t index) {
 
       uint8_t val = this->puzzlesSolved[index / 8];
       return val & (1 << (index % 8));        
 
     }
 
-    void setPuzzlesSolved(uint8_t index, bool value) {
+    void setPuzzlesSolved(uint16_t index, bool value) {
 
       uint8_t val = this->puzzlesSolved[index / 8];
       val = (val & ~(1 << (index % 8))) | ((value ? 1 : 0) << (index % 8));        
