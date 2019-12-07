@@ -307,7 +307,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
             uint8_t offset = Constants::Offset[puzzleRange];
         
             PD::setColor(11, 1);            
-            renderPuzzleImage(9 + (xPos * Constants::Select_Spacing) + 2 + offset, Constants::Select_Top + 2 + offset, Puzzles::puzzles[(puzzleRange * 25) + x], scale);
+            renderPuzzleImage(9 + (xPos * Constants::Select_Spacing) + 2 + offset, Constants::Select_Top + 2 + offset, Puzzles::puzzles[(puzzleRange * 25) + x], scale, ((puzzleRange * 25) + x) % Constants::RenderPuzzle_NoOfColours);
 
         }
         else {

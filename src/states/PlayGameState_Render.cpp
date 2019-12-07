@@ -216,7 +216,7 @@ void PlayGameState::render(StateMachine & machine) {
                 uint8_t offset = Constants::Offset[puzzle.getPuzzleIndex() / 25];
                 
                 PD::drawBitmap(18, 60, Images::Congratulations);
-                renderPuzzleImage(176, 68, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale);
+                renderPuzzleImage(176, 68, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale, puzzle.getPuzzleIndex() % Constants::RenderPuzzle_NoOfColours);
                 
                 if (this->showHintGraphic) PD::drawBitmap(23, 80, Images::Hint);
                 

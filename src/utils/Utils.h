@@ -74,13 +74,49 @@ static inline void drawDottedRow(uint8_t sx, uint8_t ex, uint8_t y) {
 }
 
 
-static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleImg, uint8_t scale) {
+static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleImg, uint8_t scale, uint8_t colour) {
 
     uint8_t idx = 0;
 
     uint8_t width = puzzleImg[idx++];
     uint8_t height = puzzleImg[idx++];
     uint8_t height8 = (height % 8 == 0 ? height / 8 : (height / 8) + 1);
+
+    switch (colour) {
+
+        case 0:
+            PD::setColor(5);
+            break;
+
+        case 1:
+            PD::setColor(12);
+            break;
+
+        case 2:
+            PD::setColor(7);
+            break;
+
+        case 3:
+            PD::setColor(15);
+            break;
+
+        // case 0:
+        //     PD::setColor(9);
+        //     break;
+
+        // case 1:
+        //     PD::setColor(11);
+        //     break;
+
+        // case 2:
+        //     PD::setColor(13);
+        //     break;
+
+        // case 3:
+        //     PD::setColor(14);
+        //     break;
+            
+    }
 
     for (uint8_t y = 0; y < height8; y++){
 
@@ -91,18 +127,18 @@ static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleI
             for (uint8_t z = 0; z < 8; z++) {
 
 
-                // Alternate colours on rendering ..
+                // // Alternate colours on rendering ..
 
-                if (((z * width) + x + (width % 2 == 0 && z % 2 == 0 ? 1 : 0)) % 2 == 0) {
+                // if (((z * width) + x + (width % 2 == 0 && z % 2 == 0 ? 1 : 0)) % 2 == 0) {
                     
-                    PD::setColor(5);
+                //     PD::setColor(5);
                     
-                }
-                else {
+                // }
+                // else {
                     
-                    PD::setColor(9);
+                //     PD::setColor(12);
                     
-                }
+                // }
 
                 uint8_t val = (data & (1 << z));
 
