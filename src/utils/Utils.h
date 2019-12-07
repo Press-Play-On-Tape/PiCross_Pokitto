@@ -111,11 +111,8 @@ static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleI
 
             }
 
-printf("\n");                
         }
-printf("\n");                
 
     }
 
-printf("\n");                
 }

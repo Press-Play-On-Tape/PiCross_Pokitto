@@ -111,6 +111,14 @@ void Puzzle::setGrid(GridValue value) {
 void Puzzle::setGrid(uint8_t x, uint8_t y, GridValue value) {
 
     uint8_t width = this->cookie->puzzleWidth;
+    this->cookie->setPuzzleData_KeepSelectedImage((y * width) + x, value);
+    this->updateRowCols();
+
+}
+
+void Puzzle::setGrid_Init(uint8_t x, uint8_t y, GridValue value) {
+
+    uint8_t width = this->cookie->puzzleWidth;
     this->cookie->setPuzzleData((y * width) + x, value);
     this->updateRowCols();
 
@@ -141,7 +149,7 @@ void Puzzle::setPuzzleMaxCol(uint8_t value) {
 }
 
 bool Puzzle::getPuzzlesSolved(uint16_t index) {
-printf("%i\n",index);
+
     return (this->cookie->getPuzzlesSolved(index));
 
 }
@@ -312,5 +320,39 @@ uint8_t Puzzle::getPuzzleMaxRows() {
 uint8_t Puzzle::getPuzzleMaxCols() {
     
     return this->cookie->puzzleMaxCols;
+
+}
+
+bool Puzzle::incHintCounter() {
+    
+    this->cookie->hintCounter++;
+    
+    if (this->cookie->hintCounter % Constants::HintCount == 0) {
+        
+        this->cookie->hintCounter = 0;
+        this->cookie->hintCount++;
+        return true;
+        
+    }
+    
+    return false;
+
+}
+
+uint8_t Puzzle::getHintCounter() {
+    
+    return this->cookie->hintCounter;
+
+}
+
+uint8_t Puzzle::getHintCount() {
+    
+    return this->cookie->hintCount;
+
+}
+
+void Puzzle::decHintCount() {
+    
+    this->cookie->hintCount--;
 
 }

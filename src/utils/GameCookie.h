@@ -16,6 +16,8 @@ class GameCookie : public Pokitto::Cookie {
     uint8_t puzzleCols[16 * 4];    // Packed
     uint8_t puzzleRows[16 * 4];    // Packed
     uint8_t puzzlesSolved[300 / 8];
+    uint8_t hintCount = 2;
+    uint8_t hintCounter;
 
   public:
 

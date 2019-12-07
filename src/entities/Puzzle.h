@@ -25,6 +25,8 @@ class Puzzle {
     uint8_t getRow(uint8_t col, uint8_t index);
     uint8_t getPuzzleMaxRows();
     uint8_t getPuzzleMaxCols();
+    uint8_t getHintCount();
+    uint8_t getHintCounter();
     bool getPuzzlesSolved(uint16_t index);
 
     void setX(uint8_t value);
@@ -32,6 +34,7 @@ class Puzzle {
     void setSize(uint8_t value);
     void setGrid(GridValue value);
     void setGrid(uint8_t x, uint8_t y, GridValue value);
+    void setGrid_Init(uint8_t x, uint8_t y, GridValue value);
     void setCol(uint8_t col, uint8_t index, uint8_t value);
     void setRow(uint8_t col, uint8_t index, uint8_t value);
 
@@ -43,6 +46,8 @@ class Puzzle {
     void decX();
     void incY();
     void decY();
+    bool incHintCounter();
+    void decHintCount();
 
     bool isColMatch(uint8_t col);
     bool isRowMatch(uint8_t row);

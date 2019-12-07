@@ -19,6 +19,9 @@ void PlayGameState::activate(StateMachine & machine) {
     this->marginLeft = 3 + this->maxSeriesRow * 7;
     this->marginTop = 2 + this->maxSeriesCol * 10;
 
+
+    // Work out offsets ..
+    
     if (this->marginLeft + (puzzle.getSize() * Constants::GridWidthX) < 220) {
         this->puzzleLeft = (220 - this->marginLeft - (puzzle.getSize() * Constants::GridWidthX) ) / 2;
     }
@@ -34,9 +37,13 @@ void PlayGameState::activate(StateMachine & machine) {
     }
     
     this->counter = 0;
-    this->showMenu = false;
-    this->gameOver = false;
+    this->viewState = ViewState::Normal;
+    this->showHintGraphic = false;
     
+    this->hintType = HintType::Col;
+    this->hintIndexCol = 0;
+    this->hintIndexRow = 0;
+
     puzzle.setX(0);
     puzzle.setY(0);
     puzzle.updateRowCols();

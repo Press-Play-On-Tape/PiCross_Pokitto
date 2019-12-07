@@ -6423,6 +6423,27 @@
 		},
 		"\\src\\images\\binder\\Selector_Top.h": {
 			"sdcard": false
+		},
+		"/src/images/binder/Binder_Folded copy.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Give_Hint.png": {
+			"sdcard": false
+		},
+		"/src/images/binder/Give_Hint.h": {
+			"sdcard": false
+		},
+		"/src/Hint.jpg": {
+			"sdcard": false
+		},
+		"/src/images/Hint.jpg": {
+			"sdcard": false
+		},
+		"/src/images/Hint.png": {
+			"sdcard": false
+		},
+		"/src/images/Hint.h": {
+			"sdcard": false
 		}
 	}
 }

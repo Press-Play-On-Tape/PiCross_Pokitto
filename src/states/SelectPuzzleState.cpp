@@ -148,7 +148,7 @@ void SelectPuzzleState::populatePuzzle(StateMachine & machine, uint16_t puzzleIn
             for (uint8_t z = 0; z < 8; z++) {
 
                 GridValue val = (data & (1 << z)) > 0 ? GridValue::SelectedInImage : GridValue::Blank;
-                puzzle.setGrid(x, static_cast<uint8_t>((y * 8) + z), val);
+                puzzle.setGrid_Init(x, static_cast<uint8_t>((y * 8) + z), val);
 
             }
 

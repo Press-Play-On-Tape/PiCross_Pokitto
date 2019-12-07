@@ -14,12 +14,14 @@ namespace Images {
     #include "Cursor.h"
     #include "Pen.h"
     #include "PiCrossHeading.h"
+    #include "Hint.h"
 
     #include "binder/Binder_Top.h"
     #include "binder/Binder_Bottom.h"
     #include "binder/Binder_Left.h"
     #include "binder/Binder_Right.h"
     #include "binder/Binder_Folded.h"
+    #include "binder/Give_Hint.h"
 
     #include "ppot/Ppot_00.h"
     #include "ppot/Ppot_01.h"

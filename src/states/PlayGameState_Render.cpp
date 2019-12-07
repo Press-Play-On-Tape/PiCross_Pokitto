@@ -50,7 +50,6 @@ void PlayGameState::render(StateMachine & machine) {
     if (puzzle.getSize() < 15) {
 
         PD::drawBitmap(0, 0, Images::Binder_Left);
-//      PD::drawBitmap(208, 0, Images::Binder_Right);
 
     }    
 
@@ -94,7 +93,6 @@ void PlayGameState::render(StateMachine & machine) {
                 case GridValue::Marked:
                     PD::setColor(4);
                     PD::fillRectangle(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 2 - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset, 7, 6);
-//                    PD::drawBitmap(this->marginLeft + (x * Constants::GridWidthX) + 2 - this->xOffset, this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset, Images::Marked);
                     break;
             
             }
@@ -182,53 +180,92 @@ void PlayGameState::render(StateMachine & machine) {
 
     // Game over?
     
-    if (completedRows == 2 * size && !this->gameOver) {
+    if (completedRows == 2 * size && this->viewState != ViewState::GameOver) {
         
-        this->gameOver = true;
+        this->viewState = ViewState::GameOver;
+        
+        // Increase hint counter if the puzzle hasn't been solved before ..
+        
+        if (!puzzle.getPuzzlesSolved(puzzle.getPuzzleIndex())) {
+        
+            this->showHintGraphic = puzzle.incHintCounter();
+
+        }
+        
         puzzle.setPuzzlesSolved(puzzle.getPuzzleIndex(), true);
 
     }
 
-    if (this->gameOver) {
 
-        switch (this->counter) {
-
-          case 1:
-            puzzle.saveCookie();
+    switch (this->viewState) {
+        
+        case ViewState::GameOver:
+            
+            switch (this->counter) {
+    
+              case 1:
+                puzzle.saveCookie();
+                break;
+    
+              case 2:
+    
+                uint8_t width = puzzle.getSize();
+                uint8_t height = puzzle.getSize();
+    
+                uint8_t scale = Constants::Scale[puzzle.getPuzzleIndex() / 25];
+                uint8_t offset = Constants::Offset[puzzle.getPuzzleIndex() / 25];
+                
+                PD::drawBitmap(18, 60, Images::Congratulations);
+                renderPuzzleImage(176, 68, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale);
+                
+                if (this->showHintGraphic) PD::drawBitmap(23, 80, Images::Hint);
+                
+                break;
+    
+            }
+           
             break;
-
-          case 2:
-
-            uint8_t width = puzzle.getSize();
-            uint8_t height = puzzle.getSize();
-
-            uint8_t scale = Constants::Scale[puzzle.getPuzzleIndex() / 25];
-            uint8_t offset = Constants::Offset[puzzle.getPuzzleIndex() / 25];
             
-            PD::drawBitmap(18, 60, Images::Congratulations);
-            
-            renderPuzzleImage(176, 68, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale);
+        case ViewState::Menu:
 
+            PD::drawBitmap(107, 75, Images::Binder_Folded);
+            if (puzzle.getHintCount() > 0) PD::drawBitmap(159, 147, Images::Give_Hint);
+            PD::drawBitmap(214, 147 + (this->menuOption * 9), Images::ArrowLeft);
             
-            // PD::drawBitmap(101 - (width / 2), 32 - (height / 2), Images::Puzzles[puzzle.getPuzzleIndex()]);
             break;
+            
+        case ViewState::Normal:
 
-       }
+            if (flash) {
+                PD::setColor(8, 1);            
+                PD::drawBitmap(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset + 1, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset + 1, Images::Cursor);
+                PD::drawRect(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset, 10, 10);
+            }
+            
+            break;
+            
+        case ViewState::Hint:
+        
+            if (flash) {
+                
+                PD::setColor(5);
+                
+                if (this->hintType == HintType::Col) {
+                    
+//                    PD::drawColumn(this->puzzleLeft + this->marginLeft + (this->hintIndexCol * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop - this->yOffset, this->puzzleTop + this->marginTop - this->yOffset + (size * Constants::GridWidthY)); 
+                    PD::drawRect(this->puzzleLeft + this->marginLeft + (this->hintIndexCol * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop - this->yOffset, Constants::GridWidthX, (size * Constants::GridWidthY));
+                }
+                else {
     
-    }
-    else if (this->showMenu) {
-    
-        PD::drawBitmap(107, 75, Images::Binder_Folded);
-        PD::drawBitmap(214, 147 + (this->menuOption * 9), Images::ArrowLeft);
-
-    }
-    else {
-    
-        if (flash) {
-            PD::setColor(8, 1);            
-            PD::drawBitmap(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset + 1, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset + 1, Images::Cursor);
-            PD::drawRect(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset, 10, 10);
-        }
+//                    PD::drawRow(this->puzzleLeft + this->marginLeft - this->xOffset, this->puzzleLeft + this->marginLeft - this->xOffset + (size * Constants::GridWidthX), this->puzzleTop + this->marginTop + (this->hintIndexRow * Constants::GridWidthY) - this->yOffset);  
+                    PD::drawRect(this->puzzleLeft + this->marginLeft - this->xOffset, this->puzzleTop + this->marginTop + (this->hintIndexRow * Constants::GridWidthY) - this->yOffset, (size * Constants::GridWidthY), Constants::GridWidthY);  
+                    
+                }
+            
+                
+            }
+            
+            break;
     
     }
 
