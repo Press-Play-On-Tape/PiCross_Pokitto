@@ -85,37 +85,21 @@ static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleI
     switch (colour) {
 
         case 0:
-            PD::setColor(5);
+            PD::setColor(9);
             break;
 
         case 1:
-            PD::setColor(12);
+            PD::setColor(10);
             break;
 
         case 2:
-            PD::setColor(7);
+            PD::setColor(11);
             break;
 
         case 3:
-            PD::setColor(15);
+            PD::setColor(12);
             break;
 
-        // case 0:
-        //     PD::setColor(9);
-        //     break;
-
-        // case 1:
-        //     PD::setColor(11);
-        //     break;
-
-        // case 2:
-        //     PD::setColor(13);
-        //     break;
-
-        // case 3:
-        //     PD::setColor(14);
-        //     break;
-            
     }
 
     for (uint8_t y = 0; y < height8; y++){
@@ -125,20 +109,6 @@ static void renderPuzzleImage(uint8_t xPos, uint8_t yPos, const uint8_t *puzzleI
             uint8_t data = puzzleImg[idx++];
 
             for (uint8_t z = 0; z < 8; z++) {
-
-
-                // // Alternate colours on rendering ..
-
-                // if (((z * width) + x + (width % 2 == 0 && z % 2 == 0 ? 1 : 0)) % 2 == 0) {
-                    
-                //     PD::setColor(5);
-                    
-                // }
-                // else {
-                    
-                //     PD::setColor(12);
-                    
-                // }
 
                 uint8_t val = (data & (1 << z));
 

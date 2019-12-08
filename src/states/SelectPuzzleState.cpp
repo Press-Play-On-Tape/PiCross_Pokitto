@@ -267,7 +267,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
     int8_t cursorPosition = (puzzleIndexMod25 < 2 ? lowerLimit + puzzleIndexMod25 : (puzzleIndexMod25 > 22 ? lowerLimit + puzzleIndexMod25 - 20 : lowerLimit + 2));
     
     
-    PD::fillScreen(1);
+    PD::fillScreen(7);
     
     
     // Render top and bottom binders ..
@@ -305,8 +305,6 @@ void SelectPuzzleState::render(StateMachine & machine) {
             
             uint8_t scale = Constants::Scale[puzzleRange];
             uint8_t offset = Constants::Offset[puzzleRange];
-        
-            PD::setColor(11, 1);            
             renderPuzzleImage(9 + (xPos * Constants::Select_Spacing) + 2 + offset, Constants::Select_Top + 2 + offset, Puzzles::puzzles[(puzzleRange * 25) + x], scale, ((puzzleRange * 25) + x) % Constants::RenderPuzzle_NoOfColours);
 
         }
@@ -319,7 +317,7 @@ void SelectPuzzleState::render(StateMachine & machine) {
             PD::drawBitmap(32 + (xPos * Constants::Select_Spacing), Constants::Select_Top + 23, Images::Pen);
         }
 
-        PD::setColor(8, 1);
+        PD::setColor(5, 7);
         PD::setCursor(13 + (xPos * Constants::Select_Spacing) + 7, Constants::Select_Label);
         if (x + 1 < 10) PD::print("0");
         PD::print(x + 1);
@@ -327,13 +325,13 @@ void SelectPuzzleState::render(StateMachine & machine) {
     }
 
 
-    PD::setColor(8, 1);
+    PD::setColor(5, 7);
     PD::setCursor(11, 49);
     PD::print(puzzleRange + 5);
     PD::print("x");
     PD::print(puzzleRange + 5);
 
-    PD::setColor(1, 8);
+    PD::setColor(7, 5);
     PD::setCursor(180, 49);
     if (completed < 100) PD::print("0");
     if (completed < 10)  PD::print("0");

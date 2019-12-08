@@ -41,8 +41,8 @@ void PlayGameState::render(StateMachine & machine) {
     uint8_t completedRows = 0;
 
 
-    PD::fillScreen(1);
-    PD::setColor(8);
+    PD::fillScreen(7);
+    PD::setColor(5, 7);
 
 
     // Render biner left and right ..
@@ -86,12 +86,12 @@ void PlayGameState::render(StateMachine & machine) {
                     break;
                 
                 case GridValue::Selected:
-                    PD::setColor(8);
+                    PD::setColor(5);
                     PD::fillRectangle(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 2 - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset, 7, 6);
                     break;
                 
                 case GridValue::Marked:
-                    PD::setColor(4);
+                    PD::setColor(6);
                     PD::fillRectangle(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 2 - this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 2 - this->yOffset, 7, 6);
                     break;
             
@@ -108,16 +108,16 @@ void PlayGameState::render(StateMachine & machine) {
 
         if (puzzle.isColMatch(x)) {
         
-            PD::setColor(8);
+            PD::setColor(5);
             PD::fillRect(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 1 - this->xOffset, this->puzzleTop - this->yOffset, 9, this->marginTop - 2);
-            PD::setColor(1, 8);
+            PD::setColor(7, 15);
             
             completedRows++;
         
         }
         else {
         
-            PD::setColor(8, 1);
+            PD::setColor(5, 7);
     
         }
     
@@ -143,16 +143,16 @@ void PlayGameState::render(StateMachine & machine) {
 
         if (puzzle.isRowMatch(y)) {
             
-            PD::setColor(8);
+            PD::setColor(5);
             PD::fillRect(this->puzzleLeft + this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 1 - this->yOffset, this->marginLeft - 1, 8);
-            PD::setColor(1, 8);
+            PD::setColor(7, 15);
             
             completedRows++;
             
         }
         else {
         
-            PD::setColor(8, 1);
+            PD::setColor(5, 7);
         
         }
         
@@ -237,7 +237,7 @@ void PlayGameState::render(StateMachine & machine) {
         case ViewState::Normal:
 
             if (flash) {
-                PD::setColor(8, 1);            
+                PD::setColor(9, 8);            
                 PD::drawBitmap(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset + 1, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset + 1, Images::Cursor);
                 PD::drawRect(this->puzzleLeft + this->marginLeft + (puzzle.getX() * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop + (puzzle.getY() * Constants::GridWidthY) - this->yOffset, 10, 10);
             }
@@ -248,16 +248,12 @@ void PlayGameState::render(StateMachine & machine) {
         
             if (flash) {
                 
-                PD::setColor(5);
+                PD::setColor(2);
                 
                 if (this->hintType == HintType::Col) {
-                    
-//                    PD::drawColumn(this->puzzleLeft + this->marginLeft + (this->hintIndexCol * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop - this->yOffset, this->puzzleTop + this->marginTop - this->yOffset + (size * Constants::GridWidthY)); 
                     PD::drawRect(this->puzzleLeft + this->marginLeft + (this->hintIndexCol * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop - this->yOffset, Constants::GridWidthX, (size * Constants::GridWidthY));
                 }
                 else {
-    
-//                    PD::drawRow(this->puzzleLeft + this->marginLeft - this->xOffset, this->puzzleLeft + this->marginLeft - this->xOffset + (size * Constants::GridWidthX), this->puzzleTop + this->marginTop + (this->hintIndexRow * Constants::GridWidthY) - this->yOffset);  
                     PD::drawRect(this->puzzleLeft + this->marginLeft - this->xOffset, this->puzzleTop + this->marginTop + (this->hintIndexRow * Constants::GridWidthY) - this->yOffset, (size * Constants::GridWidthY), Constants::GridWidthY);  
                     
                 }

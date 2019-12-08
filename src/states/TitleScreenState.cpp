@@ -39,7 +39,7 @@ void TitleScreenState::render(StateMachine & machine) {
 
 	(void)machine;
 
-    PD::fillScreen(1);
+    PD::fillScreen(7);
     
     
     // Render top and bottom binders ..
