@@ -2,6 +2,7 @@
 	"lastBuffer": "main.cpp",
 	"PNGFlags": {
 		"ALL": [
+			"transparent=8",
 			"palette=${appPath}/PokittoLib/Pokitto/POKITTO_CORE/PALETTES/palPico.cpp"
 		]
 	},
