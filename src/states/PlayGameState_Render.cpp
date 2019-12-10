@@ -110,7 +110,7 @@ void PlayGameState::render(StateMachine & machine) {
         
             PD::setColor(5);
             PD::fillRect(this->puzzleLeft + this->marginLeft + (x * Constants::GridWidthX) + 1 - this->xOffset, this->puzzleTop - this->yOffset, 9, this->marginTop - 2);
-            PD::setColor(7, 15);
+            PD::setColor(7, 5);
             
             completedRows++;
         
@@ -145,7 +145,7 @@ void PlayGameState::render(StateMachine & machine) {
             
             PD::setColor(5);
             PD::fillRect(this->puzzleLeft + this->xOffset, this->puzzleTop + this->marginTop + (y * Constants::GridWidthY) + 1 - this->yOffset, this->marginLeft - 1, 8);
-            PD::setColor(7, 15);
+            PD::setColor(7, 5);
             
             completedRows++;
             
@@ -218,7 +218,7 @@ void PlayGameState::render(StateMachine & machine) {
                 PD::drawBitmap(18, 60, Images::Congratulations);
                 renderPuzzleImage(176, 68, Puzzles::puzzles[puzzle.getPuzzleIndex()], scale, puzzle.getPuzzleIndex() % Constants::RenderPuzzle_NoOfColours);
                 
-                if (this->showHintGraphic) PD::drawBitmap(23, 80, Images::Hint);
+                if (this->showHintGraphic) PD::drawBitmap(42, 110, Images::Hint);
                 
                 break;
     
@@ -248,7 +248,7 @@ void PlayGameState::render(StateMachine & machine) {
         
             if (flash) {
                 
-                PD::setColor(2);
+                PD::setColor(10);
                 
                 if (this->hintType == HintType::Col) {
                     PD::drawRect(this->puzzleLeft + this->marginLeft + (this->hintIndexCol * Constants::GridWidthX) - this->xOffset, this->puzzleTop + this->marginTop - this->yOffset, Constants::GridWidthX, (size * Constants::GridWidthY));

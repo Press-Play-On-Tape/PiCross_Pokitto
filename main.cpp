@@ -21,7 +21,7 @@ int main() {
 
     PC::begin();
     PD::loadRGBPalette(palettePico);
-    PD::invisiblecolor = 11;
+    PD::invisiblecolor = 2;
     PD::persistence = true;
 
     game.setup(&cookie);
