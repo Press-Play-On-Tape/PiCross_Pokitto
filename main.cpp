@@ -19,6 +19,8 @@ int main() {
 
     cookie.begin("PICROSS", sizeof(cookie), (char*)&cookie);
 
+    Pokitto::Sound::playMusicStream("thechase.raw",0);
+
     PC::begin();
     PD::loadRGBPalette(palettePico);
     PD::invisiblecolor = 2;
@@ -31,6 +33,7 @@ int main() {
     
     if (!PC::update()) continue;
     
+//        PC::sound.updateStream();
         game.loop();
     
     }

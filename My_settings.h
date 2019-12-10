@@ -1,1 +1,4 @@
 #define PROJ_SCREENMODE 15
+#define PROJ_ENABLE_SOUND 		1
+#define PROJ_STREAMING_MUSIC 	1
+#define PROJ_AUD_FREQ           11025
