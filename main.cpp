@@ -17,15 +17,13 @@ int main() {
 
     // Initialise pokitto ..
 
-    cookie.begin("PICROSS3", sizeof(cookie), (char*)&cookie);
+    cookie.begin("PICROSS", sizeof(cookie), (char*)&cookie);
 
     PC::begin();
     PD::loadRGBPalette(palettePico);
-    PD::invisiblecolor = 15;
-    
+    PD::invisiblecolor = 11;
     PD::persistence = true;
-//    PD::invisiblecolor = 7;
-    
+
     game.setup(&cookie);
     PD::setFont(font5x7);
 

@@ -2,7 +2,7 @@
 	"lastBuffer": "main.cpp",
 	"PNGFlags": {
 		"ALL": [
-			"transparent=15",
+			"transparent=11",
 			"palette=${appPath}/PokittoLib/Pokitto/POKITTO_CORE/PALETTES/palPico.cpp"
 		]
 	},
@@ -6444,6 +6444,18 @@
 			"sdcard": false
 		},
 		"/src/images/Hint.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Hint.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\Hint.png": {
+			"sdcard": false
+		},
+		"\\src\\images\\binder\\Give_Hint.h": {
+			"sdcard": false
+		},
+		"\\src\\images\\binder\\Give_Hint.png": {
 			"sdcard": false
 		}
 	}
