@@ -33,7 +33,7 @@ int main() {
     
     if (!PC::update()) continue;
     
-//        PC::sound.updateStream();
+        PC::sound.updateStream();
         game.loop();
     
     }
