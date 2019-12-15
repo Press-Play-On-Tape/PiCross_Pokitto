@@ -27,7 +27,7 @@ namespace Constants {
     constexpr uint16_t Select_Label = Select_Top + 40;
 
     constexpr uint16_t BButtonDelay = 64;
-    constexpr uint8_t HintCount = 2;
+    constexpr uint8_t HintCount = 4;
     constexpr uint8_t RenderPuzzle_NoOfColours = 4;
 
                             //     5  6  7  8  9 10 11 12 13 14 15 16
