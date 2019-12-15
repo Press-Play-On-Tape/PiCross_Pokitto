@@ -19,7 +19,7 @@ int main() {
 
     cookie.begin("PICROSS", sizeof(cookie), (char*)&cookie);
 
-    Pokitto::Sound::playMusicStream("thechase.raw",0);
+//Pokitto::Sound::playMusicStream("pc3.raw", 0);
 
     PC::begin();
     PD::loadRGBPalette(palettePico);

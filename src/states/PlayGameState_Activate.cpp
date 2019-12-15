@@ -11,8 +11,7 @@ using PD = Pokitto::Display;
 void PlayGameState::activate(StateMachine & machine) {
 
     auto & puzzle = machine.getContext().puzzle;
- 
-    
+
     this->maxSeriesRow = puzzle.getPuzzleMaxRows();
     this->maxSeriesCol = puzzle.getPuzzleMaxCols();
 
@@ -47,6 +46,26 @@ void PlayGameState::activate(StateMachine & machine) {
     puzzle.setX(0);
     puzzle.setY(0);
     puzzle.updateRowCols();
-
+    
+    switch (puzzle.getPuzzleIndex() % 4) {
+        
+        case 0:
+            Pokitto::Sound::playMusicStream("music/PiCross1.raw", 0);
+            break;
+        
+        case 1:
+            Pokitto::Sound::playMusicStream("music/PiCross2.raw", 0);
+            break;
+        
+        case 2:
+            Pokitto::Sound::playMusicStream("music/PiCross3.raw", 0);
+            break;
+        
+        case 3:
+            Pokitto::Sound::playMusicStream("music/PiCross4.raw", 0);
+            break;
+            
+    }
+    
 }
 

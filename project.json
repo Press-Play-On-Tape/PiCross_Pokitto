@@ -6459,7 +6459,141 @@
 			"sdcard": false
 		},
 		"/thechase.raw": {
+			"sdcard": true
+		},
+		"/Assets/Banner and Icons for POP": {},
+		"/Assets/Banner and Icons for POP/Picross_24x24icon.png": {
 			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/Picross_36x36icon.png": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/Picross_Banner.png": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/Picross_24x24icon.h": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/Picross_36x36icon.h": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/Picross_Banner.h": {
+			"sdcard": false
+		},
+		"/music": {},
+		"/music/Blue_Dot_Sessions_-_Cinema_Pathetic-1576219324.raw": {
+			"sdcard": false
+		},
+		"/music/Blue_Dot_Sessions_-_Lina_my_Queen-1576219283.raw": {
+			"sdcard": false
+		},
+		"/music/Blue_Dot_Sessions_-_Lakkalia-1576219189.raw": {
+			"sdcard": false
+		},
+		"/music/Blue_Dot_Sessions_-_Lady_Lupine-1576218990.raw": {
+			"sdcard": false
+		},
+		"/music/PiCross_1.raw": {
+			"sdcard": false
+		},
+		"/music/PiCross_2.raw": {
+			"sdcard": false
+		},
+		"/music/PiCross_3.raw": {
+			"sdcard": false
+		},
+		"/music/PiCross4.raw": {
+			"sdcard": true
+		},
+		"/music/PiCross3.raw": {
+			"sdcard": true
+		},
+		"/music/PiCross2.raw": {
+			"sdcard": true
+		},
+		"/music/PiCross1.raw": {
+			"sdcard": true
+		},
+		"/music/thechase.raw": {
+			"sdcard": false
+		},
+		"/PiCross1.raw": {
+			"sdcard": false
+		},
+		"/picross1.raw": {
+			"sdcard": true
+		},
+		"/Blue_Dot_Sessions_-_Cinema_Pathetic-1576219947.raw": {
+			"sdcard": false
+		},
+		"/rrr.raw": {
+			"sdcard": false
+		},
+		"/pic_cp.raw": {
+			"sdcard": true
+		},
+		"/pic_cp0.raw": {
+			"sdcard": false
+		},
+		"/pic_cp.wav": {
+			"sdcard": true
+		},
+		"/cp.wav": {
+			"sdcard": true
+		},
+		"/pc.raw": {
+			"sdcard": true
+		},
+		"/Blue_Dot_Sessions_-_Cinema_Pathetic.raw": {
+			"sdcard": false
+		},
+		"/cp1.raw": {
+			"sdcard": true
+		},
+		"/cp2.raw": {
+			"sdcard": false
+		},
+		"/cp3.raw": {
+			"sdcard": true
+		},
+		"/cp4.raw": {
+			"sdcard": true
+		},
+		"/cp5.raw": {
+			"sdcard": true
+		},
+		"/Chad_Crouch_-_Shipping_Lanes.wav": {
+			"sdcard": false
+		},
+		"/CP6.raw": {
+			"sdcard": true
+		},
+		"/cp6.raw": {
+			"sdcard": true
+		},
+		"/PiCross_Pokitto copy.bin": {
+			"sdcard": false
+		},
+		"/cp6 copy.raw": {
+			"sdcard": false
+		},
+		"/cp5 copy.raw": {
+			"sdcard": false
+		},
+		"/cp7.raw": {
+			"sdcard": true
+		},
+		"/pc7.raw": {
+			"sdcard": true
+		},
+		"/pc1.raw": {
+			"sdcard": true
+		},
+		"/pc2.raw": {
+			"sdcard": true
+		},
+		"/pc3.raw": {
+			"sdcard": true
 		}
 	}
 }
