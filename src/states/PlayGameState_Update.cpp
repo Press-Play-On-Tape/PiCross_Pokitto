@@ -14,7 +14,6 @@ void PlayGameState::update(StateMachine & machine) {
 
     auto & puzzle = machine.getContext().puzzle;
 
-    printf("%i\n",PS::trackIsPlaying[0]);
     switch (this->viewState) {
         
         case ViewState::Normal:

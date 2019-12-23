@@ -4,7 +4,7 @@
 #define PROJ_ENABLE_SOUND       1       
 // 1 = enable streaming music from SD card
 #define PROJ_STREAMING_MUSIC    1       
-#define PROJ_AUD_FREQ           11025
+#define PROJ_AUD_FREQ           8000
 // 1 use DAC for stream, 0 = use PWM for stream
 #define PROJ_STREAM_TO_DAC      1       
 // 1 = use Gamebuino-compatible sound interrupt 

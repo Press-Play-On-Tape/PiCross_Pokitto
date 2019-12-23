@@ -6612,6 +6612,33 @@
 		},
 		"/PiCross_Pokitto.zip": {
 			"sdcard": false
+		},
+		"/PiCross.zip": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC1.png": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC2.png": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC3.png": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC4.png": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC3.h": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC4.h": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC2.h": {
+			"sdcard": false
+		},
+		"/Assets/Banner and Icons for POP/SC1.h": {
+			"sdcard": false
 		}
 	}
 }
