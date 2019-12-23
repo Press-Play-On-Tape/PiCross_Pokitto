@@ -47,6 +47,9 @@ void PlayGameState::activate(StateMachine & machine) {
     puzzle.setY(0);
     puzzle.updateRowCols();
     
+    int vol = Pokitto::Sound::getVolume();
+    Pokitto::Sound::setVolume(0); // prevent an awful sound
+
     switch (puzzle.getPuzzleIndex() % 4) {
         
         case 0:
@@ -66,6 +69,8 @@ void PlayGameState::activate(StateMachine & machine) {
             break;
             
     }
+
+    Pokitto::Sound::setVolume(vol);
     
 }
 

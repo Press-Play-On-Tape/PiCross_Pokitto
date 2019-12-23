@@ -6594,6 +6594,9 @@
 		},
 		"/pc3.raw": {
 			"sdcard": true
+		},
+		"/goldFinish_8000.mp3": {
+			"sdcard": false
 		}
 	}
 }

@@ -36,7 +36,33 @@ void PlayGameState::render(StateMachine & machine) {
 
     auto & puzzle = machine.getContext().puzzle;
 
-    bool flash = getFrameCountHalf(48);  
+
+    // Flash the cursor?
+    
+    bool flash = true;
+    this->flashCount++;  
+    
+    switch (this->flashCount) {
+        
+        case 0 ... 23:
+            flash = true;
+            break;
+            
+        case 24 ... 47:
+            flash = false;
+            break;
+            
+        case 48:
+            flash = true;
+            this->flashCount = 0;
+            break;
+        
+    }
+
+
+    
+    // Render puzzle ..
+
     uint8_t size = puzzle.getSize();
     uint8_t completedRows = 0;
 
@@ -45,7 +71,7 @@ void PlayGameState::render(StateMachine & machine) {
     PD::setColor(5, 7);
 
 
-    // Render biner left and right ..
+    // Render binder left and right ..
     
     if (puzzle.getSize() < 15) {
 

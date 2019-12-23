@@ -39,6 +39,7 @@ void PlayGameState::update(StateMachine & machine) {
             	if (PC::buttons.pressed(BTN_LEFT))	{
     			
     				puzzle.decX();
+    				this->flashCount = 0; 
     				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
     				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
     		
@@ -47,6 +48,7 @@ void PlayGameState::update(StateMachine & machine) {
     			if (PC::buttons.pressed(BTN_RIGHT)) {
     		
     				puzzle.incX();
+    				this->flashCount = 0; 
     				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
     				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
     		
@@ -55,6 +57,7 @@ void PlayGameState::update(StateMachine & machine) {
     			if (PC::buttons.pressed(BTN_UP))	{
     		
     				puzzle.decY();
+    				this->flashCount = 0; 
     				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
     				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
     		
@@ -63,6 +66,7 @@ void PlayGameState::update(StateMachine & machine) {
     			if (PC::buttons.pressed(BTN_DOWN)) {
     		
     				puzzle.incY();
+    				this->flashCount = 0; 
     				if (!(PC::buttons.pressed(BTN_A)) && (PC::buttons.repeat(BTN_A, 1))) { puzzle.setGrid(this->lastUpdate); }
     				if (!(PC::buttons.pressed(BTN_B)) && (PC::buttons.repeat(BTN_B, 1))) { puzzle.setGrid(this->lastUpdate); }
     		
@@ -226,6 +230,8 @@ void PlayGameState::update(StateMachine & machine) {
 	
         	if (PC::buttons.pressed(BTN_LEFT))	{
 			
+    			this->flashCount = 0; 
+    			
 			    if (this->hintIndexCol > 0 && this->hintType == HintType::Col) {
 			        this->hintIndexCol--;
 			    }
@@ -238,6 +244,8 @@ void PlayGameState::update(StateMachine & machine) {
 			}
 		
 			if (PC::buttons.pressed(BTN_RIGHT)) {
+			
+    			this->flashCount = 0; 
 			
 			    if (this->hintIndexCol < puzzle.getSize() - 1 && this->hintType == HintType::Col) {
 			        this->hintIndexCol++;
@@ -252,6 +260,8 @@ void PlayGameState::update(StateMachine & machine) {
 		
 			if (PC::buttons.pressed(BTN_UP)) {
 			
+    			this->flashCount = 0; 
+			
 			    if (this->hintIndexRow > 0 && this->hintType == HintType::Row) {
 			        this->hintIndexRow--;
 			    }
@@ -264,6 +274,8 @@ void PlayGameState::update(StateMachine & machine) {
 			}
 		
 			if (PC::buttons.pressed(BTN_DOWN)) {
+			
+    			this->flashCount = 0; 
 			
 			    if (this->hintIndexRow < puzzle.getSize() - 1 && this->hintType == HintType::Row) {
 			        this->hintIndexRow++;

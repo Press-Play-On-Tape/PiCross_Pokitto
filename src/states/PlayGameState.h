@@ -48,6 +48,7 @@ class PlayGameState : public BaseState {
     uint8_t xOffset = 0;
     uint8_t yOffset = 0;
     uint8_t menuOption = 0;
+    uint8_t flashCount = 0;
     
     HintType hintType = HintType::Col;
     uint8_t hintIndexCol = 0;
