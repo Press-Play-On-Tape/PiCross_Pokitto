@@ -6597,6 +6597,21 @@
 		},
 		"/goldFinish_8000.mp3": {
 			"sdcard": false
+		},
+		"/PiCross_Pokitto.pop": {
+			"sdcard": false
+		},
+		"/PiCross2.raw": {
+			"sdcard": false
+		},
+		"/PiCross3.raw": {
+			"sdcard": false
+		},
+		"/PiCross4.raw": {
+			"sdcard": false
+		},
+		"/PiCross_Pokitto.zip": {
+			"sdcard": false
 		}
 	}
 }

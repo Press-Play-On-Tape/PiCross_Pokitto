@@ -4,6 +4,7 @@
 
 using PC = Pokitto::Core;
 using PD = Pokitto::Display;
+using PS = Pokitto::Sound;
 
 
 // ----------------------------------------------------------------------------

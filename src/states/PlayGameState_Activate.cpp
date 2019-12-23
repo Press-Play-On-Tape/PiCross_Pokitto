@@ -3,6 +3,7 @@
 
 using PC = Pokitto::Core;
 using PD = Pokitto::Display;
+using PS = Pokitto::Sound;
 
 
 // ----------------------------------------------------------------------------
@@ -51,21 +52,21 @@ void PlayGameState::activate(StateMachine & machine) {
     Pokitto::Sound::setVolume(0); // prevent an awful sound
 
     switch (puzzle.getPuzzleIndex() % 4) {
-        
+
         case 0:
-            Pokitto::Sound::playMusicStream("music/PiCross1.raw", 0);
+            PS::playMusicStream("music/PiCross1.raw", 0);
             break;
         
         case 1:
-            Pokitto::Sound::playMusicStream("music/PiCross2.raw", 0);
+            PS::playMusicStream("music/PiCross2.raw", 0);
             break;
         
         case 2:
-            Pokitto::Sound::playMusicStream("music/PiCross3.raw", 0);
+            PS::playMusicStream("music/PiCross3.raw", 0);
             break;
         
         case 3:
-            Pokitto::Sound::playMusicStream("music/PiCross4.raw", 0);
+            PS::playMusicStream("music/PiCross4.raw", 0);
             break;
             
     }

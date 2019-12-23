@@ -10,6 +10,7 @@
 
 using PC = Pokitto::Core;
 using PD = Pokitto::Display;
+using PS = Pokitto::Sound;
 
 
 // ----------------------------------------------------------------------------
@@ -48,6 +49,8 @@ void SelectPuzzleState::activate(StateMachine & machine) {
         }
     
     }
+    
+    PS::pauseMusicStream();
 
 }
 
